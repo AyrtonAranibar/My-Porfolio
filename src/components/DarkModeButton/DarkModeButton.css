@@ -1,0 +1,17 @@
+.switch {
+    transition: opacity 0.3s ease-in-out;
+  }
+.flicker{
+    box-shadow: 
+    inset 4px 4px 4px white,
+    inset -4px -4px 4px gray;
+    transition: .3s;
+}
+.flicker.dark-mode{
+    transform: translateX(40px);
+    transition: .3s;
+}
+.moon{
+    box-shadow: 
+    inset -6px -6px 1px rgb(255, 253, 126);
+}

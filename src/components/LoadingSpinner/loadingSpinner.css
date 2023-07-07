@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spinner{
+    animation: spin 1s ease-in-out infinite;
+    box-shadow: 0 0 2px var(--blue) inset,
+                0 0 3px var(--blue) inset,
+                0 0 6px var(--blue) inset,
+                0 0 2px var(--blue),
+                0 0 3px var(--blue),
+                0 0 6px var(--blue);
+    
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
