@@ -1,0 +1,40 @@
+:root{
+    --dark-gray: rgb(24, 24, 27);
+    --gray: rgb(100, 100, 100);
+}
+
+header{
+    position: relative;
+    /* background-image:  url("../../assets/cyber_head_final2.png"), radial-gradient(ellipse at center, rgba(25, 54, 146, 0.699)  0%, transparent 70vh); */
+    background-image: radial-gradient(ellipse at center, rgba(25, 54, 146, 0.699)  0%, transparent 70vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: auto 90vh, 150vh 150vh; */
+    background-size: 150vh 150vh;
+}
+header::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-width: 1px;
+    border-top-width: 200px;
+    border-color: white transparent  transparent transparent;
+}
+header::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-width: 1px;
+    border-bottom-width: 200px;
+    border-color: transparent transparent white transparent;
+}
+
+header img{
+    position: absolute;
+    width: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}

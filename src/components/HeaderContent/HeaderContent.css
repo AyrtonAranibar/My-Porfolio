@@ -1,0 +1,136 @@
+:root{
+    --dark-gray: rgb(24, 24, 27);
+    --gray: rgb(100, 100, 100);
+}
+
+.header-content{
+    position: relative;
+}
+.header-content h2{
+    position: absolute;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+    font-size: 180px;
+    font-weight: 500;
+    letter-spacing: -5px;
+}
+.name-left{
+    color: var(--sky-blue);
+    z-index: 20;
+    top: 15%;
+    left: 10%;
+}
+.name-left::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    right: -45px;
+    transform: translateY(-50%);
+
+}
+.name-right{
+    color: transparent; 
+    -webkit-text-stroke: 2px white;
+    top:25%;
+    right: 5%;
+}
+.name-right::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: -45px;
+    transform: translateY(-50%);
+}
+/* Corners */
+.top-left{
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    border-width: 10px;
+    border-color: white transparent transparent white;
+}
+.top-left::after{
+    content: "";
+    position: absolute;
+    top:-7px;
+    left: -7px;
+    border-width: 10px;
+    border-color: var(--dark-gray) transparent transparent var(--dark-gray);
+}
+
+.top-right{
+    position: absolute;
+    top:-2px;
+    right: -2px;
+    border-width: 10px;
+    border-color: white white transparent transparent;
+}
+.top-right::after{
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    border-width: 10px;
+    border-color: var(--dark-gray) var(--dark-gray) transparent transparent;
+}
+
+.bottom-left{
+    position: absolute;
+    bottom:-2px;
+    left: -2px;
+    border-width: 10px;
+    border-color: transparent transparent white white;
+}
+.bottom-left::after{
+    content: "";
+    position: absolute;
+    bottom:-7px;
+    left: -7px;
+    border-width: 10px;
+    border-color: transparent transparent var(--dark-gray) var(--dark-gray);
+}
+
+.bottom-right{
+    position: absolute;
+    bottom:-2px;
+    right: -2px;
+    border-width: 10px;
+    border-color: transparent white white transparent;
+}
+.bottom-right::after{
+    content: "";
+    position: absolute;
+    bottom:-7px;
+    right: -7px;
+    border-width: 10px;
+    border-color: transparent var(--dark-gray) var(--dark-gray) transparent;
+}
+/* Particles */
+.particles-container {
+    top: 30%;
+    position: absolute;
+}
+  
+.particles-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: var(--gray);
+}

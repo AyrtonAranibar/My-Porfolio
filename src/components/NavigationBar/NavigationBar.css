@@ -1,0 +1,23 @@
+
+.navigation-bar{
+    position: relative;
+    margin: 0 3rem;
+    transform: translateY(-1px);
+} 
+.navigation-bar a{
+    display: inline-block;
+    height: fit-content;
+    padding: 2.5rem 0 0 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: larger;
+    text-transform: uppercase;
+    color:white;
+    border-top: 4px solid var(--sky-blue);
+}
+.navigation-bar a:hover{
+    color: var(--sky-blue);
+    border-color: white;
+}
+.navigation-items{
+    /* gap:15px; */
+}
