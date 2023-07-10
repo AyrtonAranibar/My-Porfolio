@@ -6,6 +6,7 @@ import { LoadingSpinner } from './components/LoadingSpinner'
 import { DarkModeButton } from './components/DarkModeButton' 
 import { NavigationBar } from './components/NavigationBar'
 import { Header } from './components/Header'
+// import { ParallaxEffect } from './components/ParallaxEffect'
 
 function App() {
   const [count, setCount] = React.useState(0)
@@ -29,9 +30,9 @@ function App() {
       :
       <div className={'App w-full h-screen '} id="App">
         {/* <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode}/> */}
-        <Header/>
-        <NavigationBar/>
         
+        <Header/>
+
       </div>
     }
     </>
