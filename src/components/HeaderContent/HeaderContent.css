@@ -1,6 +1,7 @@
 :root{
-    --dark-gray: rgb(24, 24, 27);
+    --dark-gray: rgb(17, 24, 39);
     --gray: rgb(100, 100, 100);
+    --light-gray: rgb(148, 148, 148);
 }
 
 .header-content{
@@ -14,6 +15,25 @@
     font-weight: 500;
     letter-spacing: -5px;
 }
+.text-container{
+    padding: 10px 20px;
+    top: 55%;
+    left: 10.2%;
+}
+.text-container img{
+    width: 100%;
+    top:-4px;
+    left: -4px;
+    transform: scale(1.01);
+    filter: grayscale(100%) brightness(100%);
+}
+.description-text{
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+
 .name-left{
     color: var(--sky-blue);
     z-index: 20;
@@ -33,6 +53,7 @@
 
 }
 .name-right{
+    z-index: 20;
     color: transparent; 
     -webkit-text-stroke: 2px white;
     top:25%;
@@ -115,7 +136,7 @@
 }
 /* Particles */
 .particles-container {
-    top: 30%;
+    top: 25%;
     position: absolute;
 }
   
@@ -132,5 +153,5 @@
     position: absolute;
     width: 2px;
     height: 2px;
-    background-color: var(--gray);
+    background-color: var(--light-gray);
 }

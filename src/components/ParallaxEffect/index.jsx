@@ -1,42 +1,36 @@
-import React from "react";
-import './ParallaxEffect.css';
-import fondo from '../../assets/cyberfondo.png';
-import fondo2 from '../../assets/fondo2.png';
+/**
+* This function adds parallax effect depending on the container and a list of objects,
+ * each object has a class name (string), speed (Number) 0 -> static 1 -> mouse speed
+ * and rotation (boolean)
+ * @param {String} container 
+ * @param {Array}  objectsList 
+ * @returns {Void}
+ */
 
-function ParallaxEffect() {
-  const handleMouseMove = (event) => {
-    const mouseX = event.pageX;
-    const mouseY = event.pageY;
+function parallaxEffect( container, objectsList){
+  const totalContainer = document.querySelector(`.${container}`);
 
-    const images = document.querySelectorAll('.parallax-image');
+  totalContainer.addEventListener('mousemove',(event)=>{
+      const mouseX = event.pageX;
+      const mouseY = event.pageY;
 
-    images.forEach((element) => {
-      const imageWidth = element.offsetWidth;
-      const imageHeight = element.offsetHeight;
+      const defaultXSpeed = 0.03;
+      const defaultYSpeed = 0.04;
 
-      const imageX = imageWidth - window.innerWidth;
-      const imageY = imageHeight - window.innerHeight;
+      const containerWidth = totalContainer.offsetWidth  - (totalContainer.offsetWidth/ 2);
+      const containerHeight = totalContainer.offsetHeight - (totalContainer.offsetHeight / 2);
 
-      const offsetX = (mouseX / window.innerWidth) * imageX - imageX / 2;
-      const offsetY = (mouseY / window.innerHeight) * imageY - imageY / 2;
+      const offsetX = (containerWidth - mouseX) * defaultXSpeed;
+      const offsetY = (containerHeight - mouseY) * defaultYSpeed;
 
-      const speedX = 5;
+      objectsList.map((element)=>{
+          
+          const node = document.querySelector(`.${element.objectClass}`);
+          const translate = (element.objectSpeed > 0) ? `translate(${-offsetX * element.objectSpeed }px, ${-offsetY * element.objectSpeed }px) ` : 'translate(-50% ,-50%)';
+          const rotation = (element.objectRotation) ? `rotateY(${-offsetX/2}deg) rotateX(${offsetY/2}deg)` : ' ';
+          node.style.transform = `${translate} ${rotation}`;
+      });
+  });
+};
 
-      element.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    });
-  };
-
-  return (
-    <div
-      className="parallax-container w-full h-screen bg-slate-950 z-0"
-      onMouseMove={handleMouseMove}
-    >
-      <img src={fondo2} className="parallax-image z-10" alt="cyberfondo" />
-
-      <img src={fondo} className="parallax-image z-20" alt="cyberfondo" />
-
-    </div>
-  );
-}
-
-export { ParallaxEffect };
+export { parallaxEffect };

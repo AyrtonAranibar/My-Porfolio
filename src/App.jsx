@@ -6,6 +6,7 @@ import { LoadingSpinner } from './components/LoadingSpinner'
 import { DarkModeButton } from './components/DarkModeButton' 
 import { NavigationBar } from './components/NavigationBar'
 import { Header } from './components/Header'
+import { Projects } from './components/Projects'
 // import { ParallaxEffect } from './components/ParallaxEffect'
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       // window.onload = () =>{
         setLoading(false);
       // }
-    },500);
+    },2000);
   },[]);
 
   return (
@@ -32,7 +33,7 @@ function App() {
         {/* <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode}/> */}
         
         <Header/>
-
+        <Projects/>
       </div>
     }
     </>
