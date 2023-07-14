@@ -3,7 +3,7 @@ import "./NavigationBar.css"
 
 function NavigationBar(){
     return(
-        <div className="navigation-bar w-auto h-min  z-10 flex flex-row justify-between">
+        <div className="navigation-bar w-auto h-min flex flex-row justify-between z-30">
             <div className="h-fit">   
                 <a  href="#">Ayrton Aranibar</a>
             </div>

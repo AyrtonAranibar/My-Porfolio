@@ -13,11 +13,13 @@ function HeaderContent({children}){
             <div className="top-right"></div>
             <div className="bottom-left"></div>
             <div className="bottom-right"></div>
+            <div className="rect-decoration1 absolute top-[27.5%] left-[-2px] w-[3px] h-[150px] bg-white"></div>
+            <div className="rect-decoration2  absolute top-[35.5%] right-[-2px] w-[3px] h-[150px] bg-white"></div>
             <div className="content relative h-[80%] w-full z-20">
                 <h2 className="name-left z-10">Ayrton</h2>
                 <h2 className="name-right z-10" >Aranibar</h2>
                 <div className="text-container w-[580px] z-20 absolute">
-                    <img src={containerImageWhite}/>
+                    {/* <img src={containerImageWhite}/> */}
                     <p className="description-text  text-gray-50 text-justify"> 
                         ¡Hola! Soy desarrollador web junior, tengo 4 meses de experiencia 
                         trabajando con PHP, y más de 6 meses estudiando Frontend de forma 
